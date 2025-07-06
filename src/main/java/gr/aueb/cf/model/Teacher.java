@@ -34,7 +34,8 @@ public class Teacher extends AbstractEntity {
     @JoinColumn(name = "branch_id")
     private Branch branch;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL,
+            orphanRemoval = true)
     @JoinColumn(name = "personal_info_id")
     private PersonalInfo personalInfo;
 }
